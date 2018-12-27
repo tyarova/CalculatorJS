@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.calculationKeyboard input[type="button"]{
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  margin: 2px;
+  cursor: pointer;
+  background: #48D1CC;
+  border: none;
+  color: #191970;
+}
+.textview{
+  width: 217px;
+  height: 50px;
+  margin: 5px;
+  font-size: 25px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: #48D1CC;
+  border: none;
+  color: #191970;
+}
+.main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #191970;
+  border: 2px solid #191970;
+}
+body {
+  background-color: #E0FFFF;
+}
