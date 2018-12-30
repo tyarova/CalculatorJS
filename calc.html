@@ -15,30 +15,32 @@
     </form>
 
   <table class="calculationKeyboard" >
-    <tr>
-      <td><input class="clr" type="button" value="C"></td>
-      <td><input class="number" type="button" value="0"></td>
-      <td><input class="operator" type="button" value="/"></td>
+      <tr>
+      <td><input class="operator" type="button" value="+"></td>
+      <td><input class="operator" type="button" value="-"></td>
       <td><input class="operator" type="button" value="*"></td>
-      <td><input class="dot" type="button" value="."></td>
+      <td><input class="operator" type="button" value="/"></td>
     </tr>
     <tr>
       <td><input class="number" type="button" value="7"></td>
       <td><input class="number" type="button" value="8"></td>
       <td><input class="number" type="button" value="9"></td>
-      <td><input class="operator" type="button" value="-"></td>
+       <td rowspan="3"><input class="clr" type="button" value="AC"></td>
     </tr>
     <tr>
     <td><input class="number" type="button" value="4"></td>
     <td><input class="number" type="button" value="5"></td>
     <td><input class="number" type="button" value="6"></td>
-    <td><input class="operator" type="button" value="+"></td>
     </tr>
     <tr>
       <td><input class="number" type="button" value="1"></td>
       <td><input class="number" type="button" value="2"></td>
       <td><input class="number" type="button" value="3"></td>
-      <td><input class="operator"type="button" value="="></td>
+    </tr>
+       <tr>
+      <td colspan="2"><input id="zero" class="number" type="button" value="0"></td>
+      <td><input class="dot" type="button" value="."></td>
+       <td><input class="operator"type="button" value="="></td>
     </tr>
   </table>
   <script src="calc.js"></script>
