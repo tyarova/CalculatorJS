@@ -55,10 +55,16 @@ const calculator = {
   function calculate(nextOperator) {
     let { firstOperand, displayValue, operator } = calculator;
     let inputValue = parseFloat(displayValue);
-    if (firstOperand === null) {
+    if(operator && calculator.waitingForSecondOperand){
+        calculator.operator = nextOperator;
+        console.log(calculator);
+        return;
+    }
+    if (firstOperand == null) {
       calculator.firstOperand = inputValue;
     } else if (operator) {
-        const result = performCalculation[operator](firstOperand, inputValue);
+        let currentValue = firstOperand || 0;
+        let result = performCalculation[operator](currentValue, inputValue);
     
         calculator.displayValue = String(result);
         calculator.firstOperand = result;
@@ -84,7 +90,10 @@ const calculator = {
   }
 
   function clearDisplay(){
-    calculator.displayValue = '0';
+      calculator.displayValue = '0';
+      calculator.firstOperand = null;
+      calculator.waitingForSecondOperand = false;
+      calculator.operator = null;
   }
 
 
